@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📈 Live Stock Dashboard</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <header>
+    <h1>📈 Live Stock </h1>
+  </header>
+
+  <!-- Controls bar separate from title -->
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search company...">
+    
+    <select id="sort">
+      <option value="none">Sort by</option>
+      <option value="price">Price</option>
+      <option value="change">Change %</option>
+      <option value="name">Name</option>
+    </select>
+    <button id="refresh">🔄</button>
+    <button id="dark-mode-toggle">🌙</button>
+  </div>
+
+  <main>
+    <section>
+      <h2>Live Stocks</h2>
+      <div class="loader" id="stock-loader"></div>
+      <div id="stock-list" class="stock-grid"></div>
+    </section>
+
+    <section>
+      <h2>Market News</h2>
+      <div class="loader" id="news-loader"></div>
+      <ul id="news-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Data provided by Finnhub API</p>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>
